@@ -1,0 +1,240 @@
+@import 'modern-normalize';
+@import url('./fonts.css');
+@import url('./reset.css');
+
+:root {
+  --black: #161616;
+  --white: #ffffff;
+  --white-bg: #fdfdfd;
+  --low-priority-color: #8fa1d0;
+  --medium-priority-collor: #e09cb5;
+  --high-priority-color: #bedbb0;
+  --without-priority-color: rgba(22, 22, 22, 0.3);
+  --auth-form-bg-color: #151515;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  min-width: 320px;
+  position: relative;
+
+  --main-color: #bedbb0; /* The main color of a page; used in buttons, calendar, hover and icons */
+  --main-bg-color: #f6f6f7; /* Main color of background and also background of icon when board creates */
+  --modal-bg-color: #fcfcfc; /* background color of all modal windows and backdrop */
+  --header-bg-color: #fcfcfc; /* Background color of a header */
+  --sidebar-bg-color: #ffffff; /* Background color of a sidebar */
+  --calendar-bg-color: #ffffff; /* Background color of a calendar dropdown */
+  --icon-bg-color: #bedbb0; /* Background of icon '+' in header and sidebar */
+  --card-bg-color: #ffffff; /* Background color of a card(tast) and column name */
+  --columnPlus-bg-color: #161616; /* Background color for an icon in button "Add another column" */
+  --addColumnPlus-bg-color: #161616; /* Background color of a '+' in "Add another column" button */
+  --columnPlus-strok: #ffffff; /* Strok of a plus icon */
+  --logo-fill-color: #ffffff; /* Fill of a plus icon */
+  --scrollX-color: #e8e8e8; /* Color of a horizontal scroll */
+  --scrollX-bg-color: #ffffff; /* Background color of a horizontal scroll */
+  --scrollY-color: rgba(22, 22, 22, 0.1); /* Color of a vertical scroll */
+  --scrollY-bg-color: #e8e8e8; /* Background color of a vertical scroll */
+  --hover-color: #9dc888; /* COlor of buttons with hover */
+
+  --main-text-color: #161616; /*  Main color of all text (but not for sidebar) */
+  --sidebar-text-color: #161616; /* Text color for sidebar */
+  --btn-text-color: #161616; /* Text color for buttons */
+
+  --icon-color: rgba(22, 22, 22, 0.5); /* Color for icons */
+  --active-icon-color: rgba(22, 22, 22, 1); /* Color of an active icon */
+  --done-icon-color: ##161616; /* Color for icon and text "Done" */
+  --main-iconPlus-color: #ffffff; /* Color for icon '+' used for buttons */
+  --sec-iconPlus-color: #ffffff; /* Color for '+' used in "Add another column" button */
+  --logo-bg-color: #1f1f1f; /* Logo color */
+  --create-plus-color: #121212; /* Color for '+' in creating board */
+  --needHelp-bg-color: #f6f6f7; /* Background color for section 'Need help' */
+  --needHelp-logo-color: #bedbb0; /* Color of a logo "Need help" */
+  --needHelp-text-color: #161616; /* Color of a text in "Need help" section */
+  --sidebar-icon-color: rgba(22, 22, 22, 0.5); /* Color of a sidebar icon */
+  --logout-color: #bedbb0;
+  --description-text-color: rgba(
+    22,
+    22,
+    22,
+    0.7
+  ); /* Color of a description text */
+  --bell-icon-color: #bedbb0; /* Color of a bell icon in card */
+  --line-color: #rgba(22, 22, 22, 0.1); /* Color of a decorative line in card */
+  --btn-progress-color: #161616; /* Color of a proggress in card */
+}
+
+body.dark-mode {
+  background-color: var(--main-bg-color);
+
+  --main-color: #bedbb0; /* The main color of a page; used in buttons, calendar, hover and icons */
+  --main-bg-color: #1f1f1f; /* Main color of background and also background of icon when board creates */
+  --modal-bg-color: #151515; /* background color of all modal windows and backdrop */
+  --header-bg-color: #161616; /* Background color of a header */
+  --sidebar-bg-color: #121212; /* Background color of a sidebar */
+  --calendar-bg-color: #1f1f1f; /* Background color of a calendar dropdown */
+  --icon-bg-color: #bedbb0; /* Background of icon '+' in header and sidebar */
+  --card-bg-color: #121212; /* Background color of a card(tast) and column name */
+  --columnPlus-bg-color: #161616; /* Background color for an icon in button "Add another column" */
+  --addColumnPlus-bg-color: #ffffff; /* Background color of a '+' in "Add another column" button */
+  --columnPlus-strok: #161616; /* Strok of a plus icon */
+  --logo-fill-color: #ffffff; /* Fill of a plus icon */
+  --scrollX-color: rgba(255, 255, 255, 0.1); /* Color of a horizontal scroll */
+  --scrollX-bg-color: #161616; /* Background color of a horizontal scroll */
+  --scrollY-color: #121212; /* Color of a vertical scroll */
+  --scrollY-bg-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Background color of a vertical scroll */
+  --hover-color: #9dc888; /* COlor of buttons with hover */
+
+  --main-text-color: #ffffff; /*  Main color of all text (but not for sidebar) */
+  --sidebar-text-color: #ffffff; /* Text color for sidebar */
+  --btn-text-color: #161616; /* Text color for buttons */
+
+  --icon-color: rgba(255, 255, 255, 0.5); /* Color for icons */
+  --active-icon-color: rgba(255, 255, 255, 1); /* Color of an active icon */
+  --done-icon-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Color for icon and text "Done" */
+  --main-iconPlus-color: #ffffff; /* Color for icon '+' used for buttons */
+  --sec-iconPlus-color: #121212; /* Color for '+' used in "Add another column" button */
+  --logo-bg-color: #1f1f1f; /* Logo color */
+  --create-plus-color: #121212; /* Color for '+' in creating board */
+  --needHelp-bg-color: #1f1f1f; /* Background color for section 'Need help' */
+  --needHelp-logo-color: #bedbb0; /* Color of a logo "Need help" */
+  --needHelp-text-color: #ffffff; /* Color of a text in "Need help" section */
+  --sidebar-icon-color: rgba(255, 255, 255, 0.5); /* Color of a sidebar icon */
+  --logout-color: #bedbb0;
+  --description-text-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Color of a description text */
+  --bell-icon-color: #bedbb0; /* Color of a bell icon in card */
+  --line-color: #rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Color of a decorative line in card */
+  --btn-progress-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Color of a proggress in card */
+}
+
+body.violet-mode {
+  background-color: var(--main-bg-color);
+
+  --main-color: #bedbb0; /* The main color of a page; used in buttons, calendar, hover and icons */
+  --main-bg-color: #ecedfd; /* Main color of background and also background of icon when board creates */
+  --modal-bg-color: #fcfcfc; /* background color of all modal windows and backdrop */
+  --header-bg-color: #ffffff; /* Background color of a header */
+  --sidebar-bg-color: #5255bc; /* Background color of a sidebar */
+  --calendar-bg-color: #ffffff; /* Background color of a calendar dropdown */
+  --icon-bg-color: #b8bcfd; /* Background of icon '+' in header and sidebar */
+  --card-bg-color: #ffffff; /* Background color of a card(tast) and column name */
+  --columnPlus-bg-color: #ffffff; /* Background color for an icon in button "Add another column" */
+  --addColumnPlus-bg-color: #5255bc; /* Background color of a '+' in "Add another column" button */
+  --columnPlus-strok: #ffffff; /* Strok of a plus icon */
+  --logo-fill-color: #5255bc; /* Fill of a plus icon */
+  --scrollX-color: #b8bcfd; /* Color of a horizontal scroll */
+  --scrollX-bg-color: #ffffff; /* Background color of a horizontal scroll */
+  --scrollY-color: #b8bcfd; /* Color of a vertical scroll */
+  --scrollY-bg-color: #ffffff; /* Background color of a vertical scroll */
+  --hover-color: #7b7ede; /* COlor of buttons with hover */
+
+  --main-text-color: #161616; /*  Main color of all text (but not for sidebar) */
+  --sidebar-text-color: #ffffff; /* Text color for sidebar */
+  --btn-text-color: #ffffff; /* Text color for buttons */
+
+  --icon-color: rgba(22, 22, 22, 0.5); /* Color for icons */
+  --active-icon-color: rgba(22, 22, 22, 1); /* Color of an active icon */
+  --done-icon-color: #161616; /* Color for icon and text "Done" */
+  --main-iconPlus-color: #161616; /* Color for icon '+' used for buttons */
+  --sec-iconPlus-color: #ffffff; /* Color for '+' used in "Add another column" button */
+  --logo-bg-color: #ecedfd; /* Logo color */
+  --create-plus-color: #ffffff; /* Color for '+' in creating board */
+  --needHelp-bg-color: rgba(
+    236,
+    237,
+    253,
+    0.4
+  ); /* Background color for section 'Need help' */
+  --needHelp-logo-color: #5255bc; /* Color of a logo "Need help" */
+  --needHelp-text-color: #ffffff; /* Color of a text in "Need help" section */
+  --sidebar-icon-color: rgba(255, 255, 255, 0.5); /* Color of a sidebar icon */
+  --logout-color: #ffffff;
+  --description-text-color: rgba(
+    22,
+    22,
+    22,
+    0.7
+  ); /* Color of a description text */
+  --bell-icon-color: #5255bc; /* Color of a bell icon in card */
+  --line-color: #rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Color of a decorative line in card */
+  --btn-progress-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Color of a proggress in card */
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* For sceens 320px and to be adaptive to 375px */
+.container {
+  width: 100%;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    width: 375px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 100%;
+  }
+}
