@@ -8,13 +8,34 @@
 .container {
   display: flex;
   align-items: center;
+  padding: 0 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    padding: 0 14px;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 .burgerMenu {
   stroke: var(--burger-menu-color);
   margin-top: 18px;
   margin-bottom: 18px;
-  margin-left: 20px;
+}
+
+@media screen and (min-width: 1280px) {
+  .burgerMenu {
+    position: absolute;
+    visibility: hidden;
+  }
 }
 
 .themeContainer {
@@ -24,6 +45,14 @@
   margin-left: 150px;
   margin-top: 20px;
   margin-bottom: 19px;
+}
+
+@media screen and (min-width: 768px) {
+  .themeContainer {
+    margin-left: 511px;
+    margin-top: 24px;
+    margin-bottom: 23px;
+  }
 }
 
 .themeText {
@@ -47,6 +76,13 @@
   margin-bottom: 14px;
 }
 
+@media screen and (min-width: 768px) {
+  .userContainer {
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+}
+
 .userName {
   font-weight: 500;
   font-size: 14px;
@@ -58,6 +94,6 @@
   width: 32px;
   height: 32px;
   fill: #ffffff;
-  background-color: yellow;
+  background-color: red;
   border-radius: 8px;
 }
