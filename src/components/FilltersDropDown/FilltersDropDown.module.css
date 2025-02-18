@@ -1,0 +1,18 @@
+.fillters {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 14px;
+}
+
+.filters span {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: var(--main-text-color);
+}
+
+.filltersIcon {
+  fill: none;
+  stroke: var(--icon-color);
+}
