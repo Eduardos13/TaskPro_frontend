@@ -43,6 +43,7 @@ body {
   --main-text-color: #161616; /*  Main color of all text (but not for sidebar) */
   --sidebar-text-color: #161616; /* Text color for sidebar */
   --btn-text-color: #161616; /* Text color for buttons */
+  --burger-menu-color: #161616; /* Color for icon of burger menu */
 
   --icon-color: rgba(22, 22, 22, 0.5); /* Color for icons */
   --active-icon-color: rgba(22, 22, 22, 1); /* Color of an active icon */
@@ -96,6 +97,7 @@ body.dark-mode {
   --main-text-color: #ffffff; /*  Main color of all text (but not for sidebar) */
   --sidebar-text-color: #ffffff; /* Text color for sidebar */
   --btn-text-color: #161616; /* Text color for buttons */
+  --burger-menu-color: #ffffff; /* Color for icon of burger menu */
 
   --icon-color: rgba(255, 255, 255, 0.5); /* Color for icons */
   --active-icon-color: rgba(255, 255, 255, 1); /* Color of an active icon */
@@ -159,6 +161,7 @@ body.violet-mode {
   --main-text-color: #161616; /*  Main color of all text (but not for sidebar) */
   --sidebar-text-color: #ffffff; /* Text color for sidebar */
   --btn-text-color: #ffffff; /* Text color for buttons */
+  --burger-menu-color: #161616; /* Color for icon of burger menu */
 
   --icon-color: rgba(22, 22, 22, 0.5); /* Color for icons */
   --active-icon-color: rgba(22, 22, 22, 1); /* Color of an active icon */
