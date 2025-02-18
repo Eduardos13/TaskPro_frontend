@@ -1,0 +1,67 @@
+.screenPage {
+  height: 100vh;
+  background-color: var(--main-bg-color);
+  display: flex;
+}
+
+.container {
+  padding: 0 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+.fillters {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 14px;
+}
+
+.filters span {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: var(--main-text-color);
+}
+
+.filltersIcon {
+  fill: none;
+  stroke: var(--icon-color);
+}
+
+.welcomeText {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--main-text-color);
+  padding-top: 250px;
+}
+
+@media screen and (min-width: 768px) {
+  .welcomeText {
+    padding-left: 109px;
+    padding-right: 109px;
+    padding-top: 368px;
+
+    font-size: 14px;
+    line-height: 1.29;
+    color: var(--main-text-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .welcomeText {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+}
+
+.welcomeText span {
+  color: #bedbb0;
+}
