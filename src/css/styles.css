@@ -64,7 +64,7 @@ body {
     0.7
   ); /* Color of a description text */
   --bell-icon-color: #bedbb0; /* Color of a bell icon in card */
-  --line-color: #rgba(22, 22, 22, 0.1); /* Color of a decorative line in card */
+  --line-color: rgba(22, 22, 22, 0.1); /* Color of a decorative line in card */
   --btn-progress-color: #161616; /* Color of a proggress in card */
 }
 
