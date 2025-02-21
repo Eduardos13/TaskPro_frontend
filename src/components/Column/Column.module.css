@@ -1,0 +1,79 @@
+@import url(../../css/styles.css);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.titleContainer {
+  display: flex;
+  width: 335px;
+  height: 56px;
+  background-color: var(--white);
+  /* background-color: rgb(240, 231, 162); */
+  border-radius: 8px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.columnTitle {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+
+.iconsContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.columnIcon {
+  fill: none;
+  stroke: var(--icon-color);
+}
+
+.cardsList {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.addCardBtn {
+  display: flex;
+  gap: 8px;
+  width: 335px;
+  height: 56px;
+  margin: 0 auto;
+  background-color: var(--icon-bg-color);
+  border-radius: 8px;
+  border: none;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+
+.addCardBtn:hover {
+  background-color: var(--hover-color);
+  box-shadow: 2px 2px 2px 1px gray;
+}
+
+.plusBox {
+  width: 28px;
+  height: 28px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.plusBtn {
+  stroke: white;
+}

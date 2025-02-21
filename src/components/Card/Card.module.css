@@ -1,3 +1,5 @@
+@import url(../../css/styles.css);
+
 .taskCard {
   background-color: rgb(206, 123, 123);
   /* background-color: var(--card-bg-color); */

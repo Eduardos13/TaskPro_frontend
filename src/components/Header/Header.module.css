@@ -1,3 +1,5 @@
+@import url(../../css/styles.css);
+
 .header {
   background-color: var(--header-bg-color);
   width: 100%;

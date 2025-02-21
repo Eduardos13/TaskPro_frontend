@@ -5,14 +5,16 @@ import SideBar from './components/SideBar/SideBar';
 import ScreenPage from './components/ScreenPage/ScreenPage';
 import Card from './components/Card/Card';
 import Modal from './components/Modal/Modal';
+import Column from './components/Column/Column';
 
 const App = () => {
   return (
     <>
       <Header />
-      <Modal />
+      {/* <Modal /> */}
       {/* <ScreenPage /> */}
       {/* <Card /> */}
+      <Column />
     </>
   );
 };
