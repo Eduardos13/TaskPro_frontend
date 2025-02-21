@@ -18,7 +18,10 @@ const Column = () => {
             </svg>
           </div>
         </div>
-        <div className={s.cardsList}>{/* <Card /> */}</div>
+        <div className={s.cardsList}>
+          <Card />
+          <Card />
+        </div>
         <button className={s.addCardBtn}>
           <span className={s.plusBox}>
             <svg className={s.plusBtn} width="14" height="14">
