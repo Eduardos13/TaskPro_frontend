@@ -31,7 +31,7 @@ body {
   --icon-bg-color: #bedbb0; /* Background of icon '+' in header and sidebar */
   --card-bg-color: #ffffff; /* Background color of a card(tast) and column name */
   --columnPlus-bg-color: #161616; /* Background color for an icon in button "Add another column" */
-  --addColumnPlus-bg-color: #161616; /* Background color of a '+' in "Add another column" button */
+  --addColumnPlus-bg-color: #ffffff; /* Background color of a '+' in "Add another column" button */
   --columnPlus-strok: #ffffff; /* Strok of a plus icon */
   --logo-fill-color: #ffffff; /* Fill of a plus icon */
   --scrollX-color: #e8e8e8; /* Color of a horizontal scroll */

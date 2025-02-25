@@ -2,10 +2,9 @@
   display: flex;
   justify-content: flex-end;
   gap: 8px;
-  padding-top: 14px;
 }
 
-.filters span {
+.filtersTitle {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;

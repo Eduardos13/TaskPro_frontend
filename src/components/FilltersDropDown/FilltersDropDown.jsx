@@ -9,7 +9,7 @@ const FilltersDropDown = () => {
         <svg className={s.filltersIcon} width="16" height="16">
           <use href={`${sprite}#icon-fillters`} />
         </svg>
-        <span>Fillters</span>
+        <span className={s.filtersTitle}>Fillters</span>
       </div>
     </>
   );

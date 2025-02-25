@@ -1,0 +1,78 @@
+@import url(../css/styles.css);
+
+.container {
+  padding-top: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-top: 20px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.boardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.boardTitle {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .boardTitle {
+    font-size: 18px;
+  }
+}
+
+.addColumnBtn {
+  display: flex;
+  gap: 8px;
+  width: 335px;
+  height: 56px;
+  margin: 0 auto;
+  background-color: var(--addColumnPlus-bg-color);
+  border-radius: 8px;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .addColumnBtn {
+    margin: 0;
+    margin-top: 26px;
+  }
+}
+
+.addColumnBtn:hover {
+  background-color: var(--hover-color);
+  box-shadow: 2px 2px 2px 1px gray;
+}
+
+.plusBox {
+  width: 28px;
+  height: 28px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.plusBtn {
+  stroke: white;
+}
