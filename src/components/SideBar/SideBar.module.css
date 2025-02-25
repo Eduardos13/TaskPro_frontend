@@ -1,0 +1,175 @@
+@import url(../../css/styles.css);
+
+.sideBarSection {
+  width: 225px;
+  height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .sideBarSection {
+    width: 260px;
+  }
+}
+
+.sideBarContainer {
+  padding: 14px 14px 0px 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .sideBarContainer {
+    padding: 24px 24px 0px 24px;
+  }
+}
+
+.logoBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 104px;
+  height: 32px;
+  margin-bottom: 70px;
+}
+
+@media screen and (min-width: 768px) {
+  .logoBox {
+    margin-bottom: 60px;
+  }
+}
+
+.mailLogoSpan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  background-color: black;
+}
+
+.mainLogo {
+  fill: var(--white);
+}
+
+.mainTitle {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.04em;
+}
+
+.createBoardBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.myBoardsTitle {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  color: rgba(22, 22, 22, 0.5);
+}
+
+.addBoard {
+  display: flex;
+  /* width: 197px; */
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px rgba(22, 22, 22, 0.1) solid;
+  border-bottom: 1px rgba(22, 22, 22, 0.1) solid;
+  margin-bottom: 40px;
+}
+
+.createBordTitle {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  width: 76px;
+}
+
+.addBoardPlusBtn {
+  width: 40px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: var(--icon-bg-color);
+}
+
+.addBoardPlus {
+  stroke: black;
+}
+
+.boardsList {
+  height: 140px;
+}
+
+.boardItem {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.needHelpBox {
+  width: 197px;
+  height: 238px;
+  background-color: var(--main-bg-color);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 24px;
+}
+
+.needHelpDescription {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  padding-top: 14px;
+  padding-bottom: 18px;
+}
+
+.needHelpDescription span {
+  color: var(--main-color);
+}
+
+.needHelpBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 20px;
+  color: var(--main-text-color);
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.02em;
+}
+
+.needHelpBtn svg {
+  fill: none;
+  stroke: var(--black);
+}
+
+.logoutBtn {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--main-text-color);
+}
+
+.logoutBtn svg {
+  fill: none;
+  stroke: var(--main-color);
+}
