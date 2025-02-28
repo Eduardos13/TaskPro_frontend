@@ -17,20 +17,28 @@ const FilltersDropDown = () => {
           <span className={s.showAll}>Show all</span>
         </div>
         <ul className={s.lablesList}>
-          <li className={`${s.lablesItem} ${s.noPriority}`}>
-            <input type="checkbox" value="without" />
+          <li className={`${s.lablesItem} ${s.withoutPriority}`}>
+            <svg className={s.priorityLable} width="14" height="14">
+              <use href={`${sprite}#icon-priority-sign`} />
+            </svg>
             Without priority
           </li>
           <li className={`${s.lablesItem} ${s.lowPriority}`}>
-            <input type="checkbox" value="low" />
+            <svg className={s.priorityLable} width="14" height="14">
+              <use href={`${sprite}#icon-priority-sign`} />
+            </svg>
             Low
           </li>
           <li className={`${s.lablesItem} ${s.mediumPriority}`}>
-            <input type="checkbox" value="medium" />
+            <svg className={s.priorityLable} width="14" height="14">
+              <use href={`${sprite}#icon-priority-sign`} />
+            </svg>
             Medium
           </li>
           <li className={`${s.lablesItem} ${s.highPriority}`}>
-            <input type="checkbox" value="high" />
+            <svg className={s.priorityLable} width="14" height="14">
+              <use href={`${sprite}#icon-priority-sign`} />
+            </svg>
             High
           </li>
         </ul>

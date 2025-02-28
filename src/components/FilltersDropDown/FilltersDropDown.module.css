@@ -84,12 +84,15 @@
   gap: 8px;
 }
 
-.lablesItem input {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
+.withoutPriority svg {
+  fill: var(--without-priority-color);
 }
-
-.noPriority input {
-  background-color: var(--without-priority-color);
+.lowPriority svg {
+  fill: var(--low-priority-color);
+}
+.mediumPriority svg {
+  fill: var(--medium-priority-color);
+}
+.highPriority svg {
+  fill: var(--high-priority-color);
 }
