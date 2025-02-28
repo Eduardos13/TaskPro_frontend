@@ -7,17 +7,19 @@ import Card from './components/Card/Card.jsx';
 import Modal from './components/Modal/Modal.jsx';
 import Column from './components/Column/Column.jsx';
 import Board from './Board/Board.jsx';
+import FilltersDropDown from './components/FilltersDropDown/FilltersDropDown.jsx';
 
 const App = () => {
   return (
     <>
       <Header />
-      <SideBar />
+      {/* <SideBar /> */}
       {/* <Modal /> */}
       {/* <ScreenPage /> */}
       {/* <Card /> */}
       {/* <Column /> */}
       {/* <Board /> */}
+      <FilltersDropDown />
     </>
   );
 };

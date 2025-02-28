@@ -9,7 +9,12 @@ const Board = () => {
       <div className={s.container}>
         <div className={s.boardTop}>
           <h2 className={s.boardTitle}>Project office</h2>
-          <FilltersDropDown />
+          <button className={s.fillters}>
+            <svg className={s.filltersIcon} width="16" height="16">
+              <use href={`${sprite}#icon-fillters`} />
+            </svg>
+            <span className={s.filtersTitle}>Fillters</span>
+          </button>
         </div>
         <button className={s.addColumnBtn}>
           <span className={s.plusBox}>

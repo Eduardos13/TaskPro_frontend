@@ -1,17 +1,95 @@
-.fillters {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
+@import url(../../css/styles.css);
+@import url(../../css/reset.css);
+
+.dropDown {
+  width: 300px;
+  height: 234px;
+  background-color: green;
+  box-shadow: 0 4px 16px 0 rgba(22, 22, 22, 0.05);
+  /* background-color: var(--modal-bg-color); */
+  border-radius: 8px;
+  position: relative;
 }
 
-.filtersTitle {
+.container {
+  padding: 24px;
+  width: 100%;
+  height: 100%;
+}
+
+.closeBtn {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.closeBtn svg {
+  stroke: black;
+}
+
+.dropsTitle {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+
+.dropsTitle::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--line-color);
+  /* background-color: red; */
+  margin-top: 20px;
+}
+
+.filltersTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+}
+
+.lablesTitle {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  color: var(--main-text-color);
 }
 
-.filltersIcon {
-  fill: none;
-  stroke: var(--icon-color);
+.showAll {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: rgba(22, 22, 22, 0.5);
+}
+
+.lablesList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+}
+
+.lablesItem {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  color: rgba(22, 22, 22, 0.5);
+
+  display: flex;
+  gap: 8px;
+}
+
+.lablesItem input {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.noPriority input {
+  background-color: var(--without-priority-color);
 }
