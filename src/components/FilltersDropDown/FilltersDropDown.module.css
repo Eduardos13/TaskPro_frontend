@@ -72,6 +72,7 @@
   flex-direction: column;
   gap: 8px;
   padding-top: 14px;
+  width: 110px;
 }
 
 .lablesItem {

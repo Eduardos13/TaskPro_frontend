@@ -6,7 +6,7 @@ const FilltersDropDown = () => {
   return (
     <div className={s.dropDown}>
       <div className={s.container}>
-        <p className={s.dropsTitle}>Filters</p>
+        <h4 className={s.dropsTitle}>Filters</h4>
         <button className={s.closeBtn}>
           <svg width="18" height="18">
             <use href={`${sprite}#icon-x-close`} />
