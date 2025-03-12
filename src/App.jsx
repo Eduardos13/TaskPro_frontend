@@ -6,13 +6,13 @@ import ScreenPage from './components/ScreenPage/ScreenPage.jsx';
 import Card from './components/Card/Card.jsx';
 import Modal from './components/Modal/Modal.jsx';
 import Column from './components/Column/Column.jsx';
-import Board from './Board/Board.jsx';
+import Board from './components/Board/Board.jsx';
 import FilltersDropDown from './components/FilltersDropDown/FilltersDropDown.jsx';
 
 const App = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {/* <SideBar /> */}
       {/* <Modal /> */}
       {/* <ScreenPage /> */}
@@ -20,6 +20,7 @@ const App = () => {
       {/* <Column /> */}
       {/* <Board /> */}
       {/* <FilltersDropDown /> */}
+      <WelcomePage />
     </>
   );
 };

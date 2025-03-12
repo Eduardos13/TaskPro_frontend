@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Board.module.css';
-import sprite from '../icons/all-icons.svg';
-import FilltersDropDown from '../components/FilltersDropDown/FilltersDropDown.jsx';
+import sprite from '../../icons/all-icons.svg';
+import FilltersDropDown from '../FilltersDropDown/FilltersDropDown.jsx';
 
 const Board = () => {
   return (
