@@ -19,7 +19,7 @@ const App = () => {
       {/* <Card /> */}
       {/* <Column /> */}
       {/* <Board /> */}
-      <FilltersDropDown />
+      {/* <FilltersDropDown /> */}
     </>
   );
 };
