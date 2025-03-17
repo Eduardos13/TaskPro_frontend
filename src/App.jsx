@@ -20,7 +20,7 @@ const App = () => {
       {/* <Column /> */}
       {/* <Board /> */}
       {/* <FilltersDropDown /> */}
-      <WelcomePage />
+      {/* <WelcomePage /> */}
     </>
   );
 };
