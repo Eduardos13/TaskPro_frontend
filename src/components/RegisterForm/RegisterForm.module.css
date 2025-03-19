@@ -1,0 +1,91 @@
+@import url(../../css/styles.css);
+@import url(../../css/reset.css);
+
+.registrationForm {
+  display: flex;
+  margin: 0 auto;
+  border-radius: 8px;
+  /* border: none; */
+  border: 2px black solid;
+  width: 335px;
+  height: 363px;
+  /* background-color: bisque; */
+  background-color: var(--auth-form-bg-color);
+}
+
+.container {
+  padding: 24px;
+}
+
+.links {
+  display: flex;
+  gap: 14px;
+  padding-bottom: 40px;
+}
+
+.linkToForm {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.active {
+  color: var(--white);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.formField {
+  border: 1px solid #bedbb0;
+  border-radius: 8px;
+  width: 287px;
+  height: 49px;
+  background-color: transparent;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 18px;
+
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+
+.registerBtn {
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 287px;
+  height: 49px;
+  background-color: var(--main-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--black);
+}
+
+.passEye {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .passEye {
+    visibility: visible;
+  }
+}
+
+.passWrapper {
+  display: flex;
+  position: relative;
+}

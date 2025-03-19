@@ -1,7 +1,7 @@
 import React from 'react';
 
 const LoginForm = () => {
-  return <></>;
+  return <>HELLO</>;
 };
 
 export default LoginForm;

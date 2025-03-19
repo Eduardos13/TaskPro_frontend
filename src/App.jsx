@@ -9,6 +9,7 @@ import Column from './components/Column/Column.jsx';
 import Board from './components/Board/Board.jsx';
 import FilltersDropDown from './components/FilltersDropDown/FilltersDropDown.jsx';
 import LoginForm from './components/LoginForm/LoginForm.jsx';
+import RegisterForm from './components/RegisterForm/RegisterForm.jsx';
 
 const App = () => {
   return (
@@ -20,8 +21,10 @@ const App = () => {
       {/* <Card /> */}
       {/* <Column /> */}
       {/* <Board /> */}
-      <FilltersDropDown />
+      {/* <FilltersDropDown /> */}
       {/* <WelcomePage /> */}
+      {/* <LoginForm /> */}
+      <RegisterForm />
     </>
   );
 };
