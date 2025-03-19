@@ -8,6 +8,7 @@ import Modal from './components/Modal/Modal.jsx';
 import Column from './components/Column/Column.jsx';
 import Board from './components/Board/Board.jsx';
 import FilltersDropDown from './components/FilltersDropDown/FilltersDropDown.jsx';
+import LoginForm from './components/LoginForm/LoginForm.jsx';
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
       {/* <Card /> */}
       {/* <Column /> */}
       {/* <Board /> */}
-      {/* <FilltersDropDown /> */}
+      <FilltersDropDown />
       {/* <WelcomePage /> */}
     </>
   );

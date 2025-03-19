@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './FilltersDropDown.module.css';
 import sprite from '../../icons/all-icons.svg';
+import clsx from 'clsx';
 
 const FilltersDropDown = () => {
   return (
@@ -17,25 +18,25 @@ const FilltersDropDown = () => {
           <span className={s.showAll}>Show all</span>
         </div>
         <ul className={s.lablesList}>
-          <li className={`${s.lablesItem} ${s.withoutPriority}`}>
+          <li className={clsx(s.lablesItem, s.withoutPriority)}>
             <svg className={s.priorityLable} width="14" height="14">
               <use href={`${sprite}#icon-priority-sign`} />
             </svg>
             Without priority
           </li>
-          <li className={`${s.lablesItem} ${s.lowPriority}`}>
+          <li className={clsx(s.lablesItem, s.lowPriority)}>
             <svg className={s.priorityLable} width="14" height="14">
               <use href={`${sprite}#icon-priority-sign`} />
             </svg>
             Low
           </li>
-          <li className={`${s.lablesItem} ${s.mediumPriority}`}>
+          <li className={clsx(s.lablesItem, s.mediumPriority)}>
             <svg className={s.priorityLable} width="14" height="14">
               <use href={`${sprite}#icon-priority-sign`} />
             </svg>
             Medium
           </li>
-          <li className={`${s.lablesItem} ${s.highPriority}`}>
+          <li className={clsx(s.lablesItem, s.highPriority)}>
             <svg className={s.priorityLable} width="14" height="14">
               <use href={`${sprite}#icon-priority-sign`} />
             </svg>
