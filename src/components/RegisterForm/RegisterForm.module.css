@@ -5,16 +5,28 @@
   display: flex;
   margin: 0 auto;
   border-radius: 8px;
-  /* border: none; */
-  border: 2px black solid;
+  border: none;
   width: 335px;
   height: 363px;
   /* background-color: bisque; */
   background-color: var(--auth-form-bg-color);
 }
 
+@media screen and (min-width: 768px) {
+  .registrationForm {
+    width: 424px;
+    height: 395px;
+  }
+}
+
 .container {
   padding: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 40px;
+  }
 }
 
 .links {
@@ -43,7 +55,7 @@
 .formField {
   border: 1px solid #bedbb0;
   border-radius: 8px;
-  width: 287px;
+  width: 100%;
   height: 49px;
   background-color: transparent;
   padding-top: 14px;
@@ -59,7 +71,7 @@
   margin-top: 10px;
   border-radius: 8px;
   border: none;
-  width: 287px;
+  width: 100%;
   height: 49px;
   background-color: var(--main-color);
 
