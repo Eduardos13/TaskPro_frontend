@@ -23,8 +23,8 @@ const App = () => {
       {/* <Board /> */}
       {/* <FilltersDropDown /> */}
       {/* <WelcomePage /> */}
-      {/* <LoginForm /> */}
-      <RegisterForm />
+      <LoginForm />
+      {/* <RegisterForm /> */}
     </>
   );
 };
