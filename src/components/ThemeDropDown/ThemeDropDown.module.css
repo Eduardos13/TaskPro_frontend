@@ -1,0 +1,33 @@
+@import url(../../css/reset.css);
+@import url(../../css/styles.css);
+
+.dropeDown {
+  width: 100px;
+  height: 107px;
+  border: 1px solid #bedbb0;
+  border-radius: 8px;
+
+  box-shadow: 0 4px 16px 0 rgba(17, 17, 17, 0.1);
+  background: #fcfcfc;
+}
+
+.container {
+  padding: 14px;
+  width: 100%;
+}
+
+.themes {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.themeLoink {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+
+.active {
+  color: #bedbb0;
+}

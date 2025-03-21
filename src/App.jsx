@@ -10,6 +10,7 @@ import Board from './components/Board/Board.jsx';
 import FilltersDropDown from './components/FilltersDropDown/FilltersDropDown.jsx';
 import LoginForm from './components/LoginForm/LoginForm.jsx';
 import RegisterForm from './components/RegisterForm/RegisterForm.jsx';
+import ThemeDropDown from './components/ThemeDropDown/ThemeDropDown.jsx';
 
 const App = () => {
   return (
@@ -23,8 +24,9 @@ const App = () => {
       {/* <Board /> */}
       {/* <FilltersDropDown /> */}
       {/* <WelcomePage /> */}
-      <LoginForm />
+      {/* <LoginForm /> */}
       {/* <RegisterForm /> */}
+      <ThemeDropDown />
     </>
   );
 };
