@@ -1,7 +1,7 @@
 @import url(../../css/reset.css);
 @import url(../../css/styles.css);
 
-.dropeDown {
+.dropDown {
   width: 100px;
   height: 107px;
   border: 1px solid #bedbb0;
@@ -9,6 +9,10 @@
 
   box-shadow: 0 4px 16px 0 rgba(17, 17, 17, 0.1);
   background: #fcfcfc;
+
+  position: absolute;
+  top: 60px;
+  cursor: pointer;
 }
 
 .container {
@@ -22,7 +26,7 @@
   gap: 4px;
 }
 
-.themeLoink {
+.themeLink {
   font-weight: 400;
   font-size: 14px;
   letter-spacing: -0.02em;

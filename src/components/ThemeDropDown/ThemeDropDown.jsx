@@ -4,13 +4,13 @@ import clsx from 'clsx';
 
 const ThemeDropDown = () => {
   return (
-    <div className={s.dropeDown}>
+    <div className={s.dropDown}>
       <div className={s.container}>
-        <div className={s.themes}>
-          <p className={clsx(s.themeLoink)}>Light</p>
-          <p className={clsx(s.themeLoink, s.active)}>Dark</p>
-          <p className={clsx(s.themeLoink)}>Violet</p>
-        </div>
+        <ul className={s.themes}>
+          <li className={clsx(s.themeLink)}>Light</li>
+          <li className={clsx(s.themeLink, s.active)}>Dark</li>
+          <li className={clsx(s.themeLink)}>Violet</li>
+        </ul>
       </div>
     </div>
   );
