@@ -3,10 +3,10 @@ import s from './ThemeDropDown.module.css';
 import clsx from 'clsx';
 import { ThemeContext } from '../../context/ThemeContext.jsx';
 
-const ThemeDropDown = () => {
+const ThemeDropDown = ({ isVisible }) => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <div className={s.dropDown}>
+    <div className={clsx(s.dropDown, { [s.dropDownVisible]: isVisible })}>
       <div className={s.container}>
         <ul className={s.themes}>
           <li

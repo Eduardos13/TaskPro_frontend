@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import s from './Header.module.css';
 import sprite from '../../icons/all-icons.svg';
 import ThemeDropDown from '../ThemeDropDown/ThemeDropDown.jsx';
+import clsx from 'clsx';
 
 const Header = () => {
   const [isThemeDropOpen, setIsThemeDropOpen] = useState(false);
@@ -29,10 +30,17 @@ const Header = () => {
           ref={dropDownRef}
         >
           <p className={s.themeText}>Theme</p>
-          <svg className={s.arrowDown} width="16" height="16">
+          <svg
+            className={clsx(s.arrowDown, {
+              [s.arrowDownRotated]: isThemeDropOpen,
+            })}
+            width="16"
+            height="16"
+          >
             <use href={`${sprite}#icon-chevron-down`} />
           </svg>
-          {isThemeDropOpen && <ThemeDropDown />}
+          {/* {isThemeDropOpen && <ThemeDropDown />} */}
+          <ThemeDropDown isVisible={isThemeDropOpen} />
         </div>
         <div className={s.userContainer}>
           <p className={s.userName}>Name</p>

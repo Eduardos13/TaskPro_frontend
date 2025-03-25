@@ -13,6 +13,12 @@
   --auth-form-bg-color: #151515;
 }
 
+* {
+  transition:
+    background-color 0.3s ease,
+    color 0.1s ease;
+}
+
 body {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
