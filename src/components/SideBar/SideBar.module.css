@@ -21,6 +21,13 @@
 @media screen and (min-width: 768px) {
   .sideBarSection {
     width: 260px;
+    left: -260px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .sideBarSection {
+    left: 0px;
   }
 }
 
