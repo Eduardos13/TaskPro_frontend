@@ -2,7 +2,20 @@
 
 .sideBarSection {
   width: 225px;
-  height: 100vh;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -225px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  background-color: var(--sidebar-bg-color);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sideBarSection.open {
+  left: 0;
 }
 
 @media screen and (min-width: 768px) {

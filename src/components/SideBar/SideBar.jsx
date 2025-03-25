@@ -2,10 +2,11 @@ import React from 'react';
 import s from './SideBar.module.css';
 import sprite from '../../icons/all-icons.svg';
 import cactus from '../../icons/cactus.png';
+import clsx from 'clsx';
 
-const SideBar = () => {
+const SideBar = ({ isOpen }) => {
   return (
-    <section className={s.sideBarSection}>
+    <section className={clsx(s.sideBarSection, { [s.open]: isOpen })}>
       <div className={s.sideBarContainer}>
         <div className={s.logoBox}>
           <span className={s.mailLogoSpan}>
