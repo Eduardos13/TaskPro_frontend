@@ -9,11 +9,13 @@ import Board from './components/Board/Board.jsx';
 import FilltersDropDown from './components/FilltersDropDown/FilltersDropDown.jsx';
 import LoginForm from './components/LoginForm/LoginForm.jsx';
 import RegisterForm from './components/RegisterForm/RegisterForm.jsx';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx';
 
 const App = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      <NotFoundPage />
       {/* <Modal /> */}
       {/* <ScreenPage /> */}
       {/* <Card /> */}

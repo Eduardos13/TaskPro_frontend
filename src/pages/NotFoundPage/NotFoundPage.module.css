@@ -1,0 +1,54 @@
+@import url(../../css/reset.css);
+@import url(../../css/styles.css);
+
+.notFoundPage {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  padding: 14px 20px 24px 20px;
+}
+
+.notFoundText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
+.code {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.notFoundTitle {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.notFoundNote {
+  font-size: 18px;
+}
+
+.goHome {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.arrowIcon {
+  fill: none;
+  stroke: black;
+  rotate: 180deg;
+}
