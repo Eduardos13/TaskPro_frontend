@@ -5,11 +5,13 @@ import WelcomePage from './pages/WelcomePage/WelcomePage.jsx';
 import AuthPage from './pages/AuthPage/AuthPage.jsx';
 import RegisterForm from './components/RegisterForm/RegisterForm.jsx';
 import LoginForm from './components/LoginForm/LoginForm.jsx';
+import Modal from './components/Modal/Modal.jsx';
 
 const App = () => {
   return (
     <>
       <Routes>
+        <Route path="/" element={<Modal />} />
         <Route path="/welcome" element={<WelcomePage />} />
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/auth/register" element={<RegisterForm />} />
