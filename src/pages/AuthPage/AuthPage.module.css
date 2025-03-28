@@ -1,0 +1,175 @@
+@import url(../../css/styles.css);
+@import url(../../css/reset.css);
+
+.welcome {
+  height: 100vh;
+  background: linear-gradient(to top, var(--main-color), var(--white));
+}
+
+.container {
+  padding-right: 20px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-right: 147px;
+    padding-left: 147px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    padding-right: 483px;
+    padding-left: 483px;
+  }
+}
+
+.logoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .logoBox {
+    gap: 24px;
+  }
+}
+
+.mainAvatar {
+  width: 124px;
+  height: 124px;
+}
+
+@media screen and (min-width: 768px) {
+  .mainAvatar {
+    width: 168px;
+    height: 168px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .mainAvatar {
+    width: 162px;
+    height: 162px;
+  }
+}
+
+.taskLogo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logoWrapper {
+  width: 40px;
+  height: 40px;
+  background-color: var(--black);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .logoWrapper {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.logo {
+  fill: var(--white);
+  width: 15px;
+  height: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 18px;
+    height: 24px;
+  }
+}
+
+.mainTitle {
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: -0.04em;
+}
+
+@media screen and (min-width: 768px) {
+  .mainTitle {
+    font-size: 40px;
+  }
+}
+
+.description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: center;
+  padding-bottom: 48px;
+}
+
+.authBtns {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.regBtn {
+  border-radius: 8px;
+  width: 335px;
+  height: 49px;
+  border: none;
+  background-color: var(--black);
+
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .regBtn {
+    width: 344px;
+  }
+}
+
+.logBtn {
+  border-radius: 8px;
+  width: 335px;
+  height: 49px;
+  border: none;
+  background-color: transparent;
+
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--black);
+
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .logBtn {
+    width: 344px;
+  }
+}
