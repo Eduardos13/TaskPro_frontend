@@ -138,6 +138,10 @@
   letter-spacing: -0.02em;
   text-align: center;
   color: var(--white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -158,6 +162,10 @@
   letter-spacing: -0.02em;
   text-align: center;
   color: var(--black);
+
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {

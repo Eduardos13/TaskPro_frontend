@@ -1,6 +1,14 @@
 @import url(../../css/styles.css);
 @import url(../../css/reset.css);
 
+.welcome {
+  height: 100vh;
+  background: linear-gradient(to top, var(--main-color), var(--white));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .registrationForm {
   display: flex;
   margin: 0 auto;

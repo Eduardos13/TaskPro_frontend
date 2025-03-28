@@ -2,6 +2,7 @@ import React from 'react';
 import s from './WelcomePage.module.css';
 import main_img from '../../icons/main-image.png';
 import sprite from '../../icons/all-icons.svg';
+import { NavLink } from 'react-router-dom';
 
 const WelcomePage = () => {
   return (
@@ -27,8 +28,12 @@ const WelcomePage = () => {
           Pro - Don't wait, start achieving your goals now!
         </p>
         <div className={s.authBtns}>
-          <button className={s.regBtn}>Registration</button>
-          <button className={s.logBtn}>Log in</button>
+          <NavLink to="/auth/register" className={s.regBtn}>
+            Registration
+          </NavLink>
+          <NavLink to="/auth/login" className={s.logBtn}>
+            Log in
+          </NavLink>
         </div>
       </div>
     </div>

@@ -1,30 +1,22 @@
 import React from 'react';
 import WelcomePage from './pages/WelcomePage/WelcomePage.jsx';
-import Header from './components/Header/Header.jsx';
-import ScreenPage from './components/ScreenPage/ScreenPage.jsx';
-import Card from './components/Card/Card.jsx';
-import Modal from './components/Modal/Modal.jsx';
-import Column from './components/Column/Column.jsx';
-import Board from './components/Board/Board.jsx';
-import FilltersDropDown from './components/FilltersDropDown/FilltersDropDown.jsx';
-import LoginForm from './components/LoginForm/LoginForm.jsx';
-import RegisterForm from './components/RegisterForm/RegisterForm.jsx';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx';
+import AuthPage from './pages/AuthPage/AuthPage.jsx';
+import { Route, Routes } from 'react-router';
+import RegisterForm from './components/RegisterForm/RegisterForm.jsx';
+import LoginForm from './components/LoginForm/LoginForm.jsx';
 
 const App = () => {
   return (
     <>
-      {/* <Header /> */}
-      <NotFoundPage />
-      {/* <Modal /> */}
-      {/* <ScreenPage /> */}
-      {/* <Card /> */}
-      {/* <Column /> */}
-      {/* <Board /> */}
-      {/* <FilltersDropDown /> */}
-      {/* <WelcomePage /> */}
-      {/* <LoginForm /> */}
-      {/* <RegisterForm /> */}
+      <Routes>
+        <Route path="/welcome" element={<WelcomePage />} />
+        <Route path="/auth" element={<AuthPage />}>
+          <Route path="register" element={<RegisterForm />} />
+          <Route path="login" element={<LoginForm />} />
+        </Route>
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
     </>
   );
 };
