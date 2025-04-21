@@ -1,11 +1,11 @@
 import React from 'react';
-import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx';
 import { Route, Routes } from 'react-router';
 import WelcomePage from './pages/WelcomePage/WelcomePage.jsx';
 import AuthPage from './pages/AuthPage/AuthPage.jsx';
 import RegisterForm from './components/RegisterForm/RegisterForm.jsx';
 import LoginForm from './components/LoginForm/LoginForm.jsx';
 import Modal from './components/Modal/Modal.jsx';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx';
 
 const App = () => {
   return (
