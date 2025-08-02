@@ -1,11 +1,11 @@
 import React from 'react';
-import s from './RegisterForm.module.css';
+import s from './Register.module.css';
 import clsx from 'clsx';
 import sprite from '../../icons/all-icons.svg';
 import { Field, Form, Formik } from 'formik';
 import { useNavigate } from 'react-router';
 
-const RegisterForm = () => {
+const Register = () => {
   const navigate = useNavigate();
 
   return (
@@ -65,4 +65,4 @@ const RegisterForm = () => {
   );
 };
 
-export default RegisterForm;
+export default Register;

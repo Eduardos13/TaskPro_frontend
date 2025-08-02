@@ -1,11 +1,11 @@
 import React from 'react';
-import s from './LoginForm.module.css';
+import s from './Login.module.css';
 import clsx from 'clsx';
 import sprite from '../../icons/all-icons.svg';
 import { Field, Form, Formik } from 'formik';
 import { useNavigate } from 'react-router';
 
-const LoginForm = () => {
+const Login = () => {
   const navigate = useNavigate();
   return (
     <div className={s.welcome}>
@@ -58,4 +58,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default Login;
