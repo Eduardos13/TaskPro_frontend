@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './ScreenPage.module.css';
 import sprite from '../../icons/all-icons.svg';
-import FilltersDropDown from '../FilltersDropDown/FilltersDropDown';
+import FilltersDropDown from '../../components/FilltersDropDown/FilltersDropDown';
 
 const ScreenPage = () => {
   return (
