@@ -9,11 +9,11 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store.js';
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <Provider store={store}>
+  <Provider store={store}>
+    <BrowserRouter>
       <ThemeProvider>
         <App />
       </ThemeProvider>
-    </Provider>
-  </BrowserRouter>
+    </BrowserRouter>
+  </Provider>
 );
