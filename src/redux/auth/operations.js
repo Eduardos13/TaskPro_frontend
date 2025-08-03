@@ -12,3 +12,15 @@ export const registerThunk = createAsyncThunk(
     }
   }
 );
+
+export const loginThunk = createAsyncThunk(
+  'login',
+  async (credentials, thunkAPI) => {
+    try {
+      const { data } = await taskPROapi.post('auth/login', credentials);
+      return data;
+    } catch (error) {
+      thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
