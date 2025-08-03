@@ -7,7 +7,7 @@ const ScreenPage = () => {
   return (
     <section className={s.screenPage}>
       <div className={s.container}>
-        <FilltersDropDown />
+        {/* <FilltersDropDown /> */}
         <p className={s.welcomeText}>
           Before starting your project, it is essential
           <span className={s.createBoard}>to create a board</span> to visualize

@@ -3,23 +3,28 @@ import s from './Register.module.css';
 import clsx from 'clsx';
 import sprite from '../../icons/all-icons.svg';
 import { Field, Form, Formik } from 'formik';
-import { Link } from 'react-router';
-import { useDispatch } from 'react-redux';
+import { Link, Navigate } from 'react-router';
+import { useDispatch, useSelector } from 'react-redux';
 import { registerThunk } from '../../redux/auth/operations';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
 
 const Register = () => {
-  const dispatch = useDispatch();
-
   const initialValues = {
     name: '',
     email: '',
     password: '',
   };
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
+  const dispatch = useDispatch();
   const handleSubmit = (values, options) => {
     dispatch(registerThunk(values));
     options.resetForm();
   };
+
+  if (isLoggedIn) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <div className={s.welcome}>

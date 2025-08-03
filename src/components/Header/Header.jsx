@@ -4,8 +4,12 @@ import sprite from '../../icons/all-icons.svg';
 import ThemeDropDown from '../ThemeDropDown/ThemeDropDown.jsx';
 import SideBar from '../SideBar/SideBar.jsx';
 import clsx from 'clsx';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../../redux/auth/selectors';
 
 const Header = () => {
+  const user = useSelector(selectUser);
+
   const [isThemeDropOpen, setIsThemeDropOpen] = useState(false);
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const dropDownRef = useRef();
@@ -58,7 +62,7 @@ const Header = () => {
             <ThemeDropDown isVisible={isThemeDropOpen} />
           </div>
           <div className={s.userContainer}>
-            <p className={s.userName}>Name</p>
+            <p className={s.userName}>{user.name}</p>
             <svg className={s.userAvatar} width="32" heigh="32">
               <use href={`${sprite}#icon-user`} />
             </svg>
