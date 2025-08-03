@@ -12,11 +12,11 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/welcome" element={<ScreenPage />} />
+          <Route index element={<ScreenPage />} />
         </Route>
         <Route path="/auth" element={<AuthPage />} />
-        <Route path="/auth/register" element={<Register />} />
         <Route path="/auth/login" element={<Login />} />
+        <Route path="/auth/register" element={<Register />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>

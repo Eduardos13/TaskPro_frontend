@@ -3,10 +3,23 @@ import s from './Register.module.css';
 import clsx from 'clsx';
 import sprite from '../../icons/all-icons.svg';
 import { Field, Form, Formik } from 'formik';
-import { useNavigate } from 'react-router';
+import { Link } from 'react-router';
+import { useDispatch } from 'react-redux';
+import { registerThunk } from '../../redux/auth/operations';
 
 const Register = () => {
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const initialValues = {
+    name: '',
+    email: '',
+    password: '',
+  };
+
+  const handleSubmit = (values, options) => {
+    dispatch(registerThunk(values));
+    options.resetForm();
+  };
 
   return (
     <div className={s.welcome}>
@@ -14,26 +27,16 @@ const Register = () => {
         <div className={s.container}>
           <div className={s.links}>
             <p className={clsx(s.active, s.linkToForm)}>Registration</p>
-            <p
-              className={clsx(s.linkToForm)}
-              onClick={() => navigate('/auth/login')}
-            >
+            <Link to="/auth/login" className={clsx(s.linkToForm)}>
               Log In
-            </p>
+            </Link>
           </div>
-          <Formik
-            initialValues={{
-              username: '',
-              email: '',
-              password: '',
-            }}
-            onSubmit={() => {}}
-          >
+          <Formik initialValues={initialValues} onSubmit={handleSubmit}>
             <Form className={s.form}>
               <Field
                 className={s.formField}
                 type="text"
-                name="username"
+                name="name"
                 placeholder="Enter your name"
               />
               <Field

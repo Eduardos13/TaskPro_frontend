@@ -3,31 +3,29 @@ import s from './Login.module.css';
 import clsx from 'clsx';
 import sprite from '../../icons/all-icons.svg';
 import { Field, Form, Formik } from 'formik';
-import { useNavigate } from 'react-router';
+import { Link } from 'react-router';
 
 const Login = () => {
-  const navigate = useNavigate();
+  const initialValues = {
+    email: '',
+    password: '',
+  };
+  const handleSubmit = (values, options) => {
+    console.log(values);
+    options.resetForm();
+  };
+
   return (
     <div className={s.welcome}>
       <div className={s.loginForm}>
         <div className={s.container}>
           <div className={s.links}>
-            <p
-              className={clsx(s.linkToForm)}
-              onClick={() => navigate('/auth/register')}
-            >
+            <Link to="/auth/register" className={clsx(s.linkToForm)}>
               Registration
-            </p>
+            </Link>
             <p className={clsx(s.linkToForm, s.active)}>Log In</p>
           </div>
-          <Formik
-            initialValues={{
-              username: '',
-              email: '',
-              password: '',
-            }}
-            onSubmit={() => {}}
-          >
+          <Formik initialValues={initialValues} onSubmit={handleSubmit}>
             <Form className={s.form}>
               <Field
                 className={s.formField}
