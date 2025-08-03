@@ -24,3 +24,11 @@ export const loginThunk = createAsyncThunk(
     }
   }
 );
+
+export const logoutThunk = createAsyncThunk('logout', async (_, thunkAPI) => {
+  try {
+    await taskPROapi.post('auth/logout');
+  } catch (error) {
+    thunkAPI.rejectWithValue(error.message);
+  }
+});

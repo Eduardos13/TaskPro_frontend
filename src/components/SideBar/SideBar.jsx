@@ -3,8 +3,18 @@ import s from './SideBar.module.css';
 import sprite from '../../icons/all-icons.svg';
 import cactus from '../../icons/cactus.png';
 import clsx from 'clsx';
+import { useDispatch, useSelector } from 'react-redux';
+import { logoutThunk } from '../../redux/auth/operations';
+import { Navigate } from 'react-router';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
 
 const SideBar = ({ isOpen }) => {
+  const dispatch = useDispatch();
+  const isLoggein = useSelector(selectIsLoggedIn);
+
+  if (!isLoggein) {
+    return <Navigate to="auth" />;
+  }
   return (
     <section className={clsx(s.sideBarSection, { [s.open]: isOpen })}>
       <div className={s.sideBarContainer}>
@@ -47,7 +57,12 @@ const SideBar = ({ isOpen }) => {
             Need help?
           </button>
         </div>
-        <button className={s.logoutBtn}>
+        <button
+          className={s.logoutBtn}
+          onClick={() => {
+            dispatch(logoutThunk());
+          }}
+        >
           <svg className={s.logoutIcon} width="32" height="32">
             <use href={`${sprite}#icon-login`} />
           </svg>

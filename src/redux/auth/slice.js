@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { loginThunk, registerThunk } from './operations';
+import { loginThunk, logoutThunk, registerThunk } from './operations';
 
 const initialState = {
   user: {
@@ -26,6 +26,9 @@ const slice = createSlice({
         state.user = action.payload.data.user;
         state.accessToken = action.payload.data.accessToken;
         state.isLoggedIn = true;
+      })
+      .addCase(logoutThunk.fulfilled, (state, action) => {
+        return initialState;
       });
   },
 });
