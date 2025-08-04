@@ -10,11 +10,12 @@ import { selectIsLoggedIn } from '../../redux/auth/selectors.js';
 
 const SideBar = ({ isOpen }) => {
   const dispatch = useDispatch();
-  const isLoggein = useSelector(selectIsLoggedIn);
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
-  if (!isLoggein) {
+  if (!isLoggedIn) {
     return <Navigate to="auth" />;
   }
+
   return (
     <section className={clsx(s.sideBarSection, { [s.open]: isOpen })}>
       <div className={s.sideBarContainer}>

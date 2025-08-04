@@ -2,9 +2,17 @@ import React from 'react';
 import s from './AuthPage.module.css';
 import main_img from '../../icons/main-image.png';
 import sprite from '../../icons/all-icons.svg';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Navigate, Outlet } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
 
 const AuthPage = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+
+  if (isLoggedIn) {
+    return <Navigate to="/" />;
+  }
+
   return (
     <div className={s.welcome}>
       <div className={s.container}>
