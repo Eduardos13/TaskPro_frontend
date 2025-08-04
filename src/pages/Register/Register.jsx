@@ -15,8 +15,8 @@ const Register = () => {
     password: '',
   };
   const isLoggedIn = useSelector(selectIsLoggedIn);
-
   const dispatch = useDispatch();
+
   const handleSubmit = (values, options) => {
     dispatch(registerThunk(values));
     options.resetForm();
