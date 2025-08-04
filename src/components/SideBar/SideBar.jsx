@@ -4,9 +4,9 @@ import sprite from '../../icons/all-icons.svg';
 import cactus from '../../icons/cactus.png';
 import clsx from 'clsx';
 import { useDispatch, useSelector } from 'react-redux';
-import { logoutThunk } from '../../redux/auth/operations';
+import { logoutThunk } from '../../redux/auth/operations.js';
 import { Navigate } from 'react-router';
-import { selectIsLoggedIn } from '../../redux/auth/selectors';
+import { selectIsLoggedIn } from '../../redux/auth/selectors.js';
 
 const SideBar = ({ isOpen }) => {
   const dispatch = useDispatch();

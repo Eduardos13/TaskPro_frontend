@@ -5,7 +5,7 @@ import ThemeDropDown from '../ThemeDropDown/ThemeDropDown.jsx';
 import SideBar from '../SideBar/SideBar.jsx';
 import clsx from 'clsx';
 import { useSelector } from 'react-redux';
-import { selectUser } from '../../redux/auth/selectors';
+import { selectUser } from '../../redux/auth/selectors.js';
 
 const Header = () => {
   const user = useSelector(selectUser);

@@ -5,8 +5,8 @@ import sprite from '../../icons/all-icons.svg';
 import { Field, Form, Formik } from 'formik';
 import { Link, Navigate } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
-import { registerThunk } from '../../redux/auth/operations';
-import { selectIsLoggedIn } from '../../redux/auth/selectors';
+import { registerThunk } from '../../redux/auth/operations.js';
+import { selectIsLoggedIn } from '../../redux/auth/selectors.js';
 
 const Register = () => {
   const initialValues = {
