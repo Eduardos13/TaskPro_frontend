@@ -1,14 +1,16 @@
 import React from 'react';
 import s from './Board.module.css';
 import sprite from '../../icons/all-icons.svg';
-import FilltersDropDown from '../FilltersDropDown/FilltersDropDown.jsx';
+import { useSelector } from 'react-redux';
+import { selectBoard } from '../../redux/board/selectors';
 
 const Board = () => {
+  const board = useSelector(selectBoard);
   return (
     <>
       <div className={s.container}>
         <div className={s.boardTop}>
-          <h2 className={s.boardTitle}>Project office</h2>
+          <h2 className={s.boardTitle}>{board.title}</h2>
           <button className={s.fillters}>
             <svg className={s.filltersIcon} width="16" height="16">
               <use href={`${sprite}#icon-fillters`} />
