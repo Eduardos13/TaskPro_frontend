@@ -1,21 +1,34 @@
 import React from 'react';
 import s from './ScreenPage.module.css';
-import sprite from '../../icons/all-icons.svg';
-import FilltersDropDown from '../../components/FilltersDropDown/FilltersDropDown';
+import { useDispatch, useSelector } from 'react-redux';
+import { openModal } from '../../redux/modal/slice.js';
+import Modal from '../../components/Modal/Modal.jsx';
+import { selectIsModalOpen } from '../../redux/modal/selectors.js';
+import AddBoardForm from '../../components/Forms/Board/AddBoardForm/AddBoardForm';
 
 const ScreenPage = () => {
+  const dispatch = useDispatch();
+  const isModalOpen = useSelector(selectIsModalOpen);
+
   return (
     <section className={s.screenPage}>
       <div className={s.container}>
         {/* <FilltersDropDown /> */}
         <p className={s.welcomeText}>
           Before starting your project, it is essential
-          <span className={s.createBoard}>to create a board</span>
+          <span className={s.createBoard} onClick={() => dispatch(openModal())}>
+            to create a board
+          </span>
           to visualize and track all the necessary tasks and milestones. This
           board serves as a powerful tool to organize the workflow and ensure
           effective collaboration among team members.
         </p>
       </div>
+      {isModalOpen && (
+        <Modal>
+          <AddBoardForm />
+        </Modal>
+      )}
     </section>
   );
 };

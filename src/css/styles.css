@@ -162,7 +162,7 @@ body.violet-mode {
   --scrollX-bg-color: #ffffff; /* Background color of a horizontal scroll */
   --scrollY-color: #b8bcfd; /* Color of a vertical scroll */
   --scrollY-bg-color: #ffffff; /* Background color of a vertical scroll */
-  --hover-color: #7b7ede; /* COlor of buttons with hover */
+  --hover-color: #7b7ede; /* Color of buttons with hover */
 
   --main-text-color: #161616; /*  Main color of all text (but not for sidebar) */
   --sidebar-text-color: #ffffff; /* Text color for sidebar */
