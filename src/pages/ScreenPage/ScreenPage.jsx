@@ -10,6 +10,7 @@ const ScreenPage = () => {
   const dispatch = useDispatch(openModal);
   const handleOpenModal = () => {
     dispatch(openModal());
+    console.log('Open modal window');
   };
   return (
     <section className={s.screenPage}>
