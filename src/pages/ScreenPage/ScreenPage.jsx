@@ -4,15 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { openModal } from '../../redux/modal/slice.js';
 import Modal from '../../components/Modal/Modal.jsx';
 import { selectIsModalOpen } from '../../redux/modal/selectors.js';
-import AddBoardForm from '../../components/Forms/Board/AddBoardForm/AddBoardForm';
-import { selectBoards } from '../../redux/board/selectors';
+import AddBoardForm from '../../components/Forms/Board/AddBoardForm/AddBoardForm.jsx';
 
 const ScreenPage = () => {
   const dispatch = useDispatch();
   const isModalOpen = useSelector(selectIsModalOpen);
-  const boards = useSelector(selectBoards);
-
-  const data = boards.filter();
 
   return (
     <section className={s.screenPage}>

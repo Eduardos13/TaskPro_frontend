@@ -16,9 +16,6 @@ const slice = createSlice({
   name: 'board',
   initialState,
   extraReducers: (builder) => {
-    builder.addCase(getAllBoards.fulfilled, (state, action) => {
-      state.items = action.payload;
-    });
     builder.addCase(createBoard.fulfilled, (state, action) => {
       state.board = action.payload;
     });

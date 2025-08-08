@@ -2,7 +2,8 @@ import { Field, Form, Formik } from 'formik';
 import s from './AddBoardForm.module.css';
 import sprite from '../../../../icons/all-icons.svg';
 import { useDispatch } from 'react-redux';
-import { createBoard } from '../../../../redux/board/operations';
+import { createBoard } from '../../../../redux/board/operations.js';
+import CreateBtn from '../../../CreateBtn/CreateBtn.jsx';
 
 const AddBoardForm = () => {
   const dispatch = useDispatch();
@@ -92,14 +93,7 @@ const AddBoardForm = () => {
               <li className={s.backgroundsItem}>16</li>
             </ul>
           </div>
-          <button type="submit" className={s.submitAddBoard}>
-            <span className={s.submitIcon}>
-              <svg width="14" height="14">
-                <use href={`${sprite}#icon-plus`} />
-              </svg>
-            </span>
-            Create
-          </button>
+          <CreateBtn />
         </Form>
       </Formik>
     </>

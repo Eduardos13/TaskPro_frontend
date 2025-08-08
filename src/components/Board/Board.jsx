@@ -1,11 +1,8 @@
 import React from 'react';
 import s from './Board.module.css';
 import sprite from '../../icons/all-icons.svg';
-import { useSelector } from 'react-redux';
-import { selectBoard } from '../../redux/board/selectors';
 
 const Board = () => {
-  const board = useSelector(selectBoard);
   return (
     <>
       <div className={s.container}>
