@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { taskPROapi } from '../../config/taskPROapi';
 
-export const getAllBoards = createAsyncThunk(
+export const getAllBoardsThunk = createAsyncThunk(
   'getBoards',
   async (_, thunkAPI) => {
     try {
@@ -13,7 +13,7 @@ export const getAllBoards = createAsyncThunk(
   }
 );
 
-export const createBoard = createAsyncThunk(
+export const createBoardThunk = createAsyncThunk(
   'createBoard',
   async (body, thunkAPI) => {
     try {

@@ -2,14 +2,14 @@ import { Field, Form, Formik } from 'formik';
 import s from './AddBoardForm.module.css';
 import sprite from '../../../../icons/all-icons.svg';
 import { useDispatch } from 'react-redux';
-import { createBoard } from '../../../../redux/board/operations.js';
+import { createBoardThunk } from '../../../../redux/board/operations.js';
 import CreateBtn from '../../../CreateBtn/CreateBtn.jsx';
 
 const AddBoardForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, options) => {
-    dispatch(createBoard(values));
+    dispatch(createBoardThunk(values));
     options.resetForm();
   };
 

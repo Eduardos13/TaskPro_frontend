@@ -9,6 +9,7 @@ const initialState = {
     theme: 'light',
     avatar: '',
   },
+  accessToken: '',
   isLoading: false,
   isError: false,
   isLoggedIn: false,
@@ -21,6 +22,7 @@ const slice = createSlice({
     builder
       .addCase(registerThunk.fulfilled, (state, action) => {
         state.user = action.payload.data.user;
+
         state.isLoggedIn = true;
       })
       .addCase(loginThunk.fulfilled, (state, action) => {
@@ -35,6 +37,7 @@ const slice = createSlice({
       .addMatcher(
         isAnyOf(loginThunk.fulfilled, registerThunk.fulfilled),
         (state, action) => {
+          state.accessToken = action.payload.data.accessToken;
           state.isError = false;
           state.isLoading = false;
         }

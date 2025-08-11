@@ -50,6 +50,10 @@
   }
 }
 
-.welcomeText span {
+.createBoard {
   color: #bedbb0;
+}
+
+.createBoard:hover {
+  cursor: pointer;
 }

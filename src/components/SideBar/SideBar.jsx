@@ -7,10 +7,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logoutThunk } from '../../redux/auth/operations.js';
 import { Navigate } from 'react-router';
 import { selectIsLoggedIn } from '../../redux/auth/selectors.js';
+import { selectIsModalOpen } from '../../redux/modal/selectors';
+import Modal from '../Modal/Modal.jsx';
+import AddBoardForm from '../Forms/Board/AddBoardForm/AddBoardForm.jsx';
+import { openModal } from '../../redux/modal/slice.js';
 
 const SideBar = ({ isOpen }) => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
+  const isModalOpen = useSelector(selectIsModalOpen);
 
   if (!isLoggedIn) {
     return <Navigate to="auth" />;
@@ -30,7 +35,12 @@ const SideBar = ({ isOpen }) => {
 
         <div className={s.createBoardBox}>
           <span className={s.myBoardsTitle}>My boards</span>
-          <div className={s.addBoard}>
+          <div
+            className={s.addBoard}
+            onClick={() => {
+              dispatch(openModal());
+            }}
+          >
             <span className={s.createBordTitle}>Create a new board</span>
             <span className={s.addBoardPlusBtn}>
               <svg className={s.addBoardPlus} width="20" height="20">
@@ -70,6 +80,12 @@ const SideBar = ({ isOpen }) => {
           Log out
         </button>
       </div>
+
+      {isModalOpen && (
+        <Modal>
+          <AddBoardForm />
+        </Modal>
+      )}
     </section>
   );
 };

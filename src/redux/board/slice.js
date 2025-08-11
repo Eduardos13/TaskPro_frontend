@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { createBoard } from './operations.js';
+import { createBoardThunk } from './operations.js';
 
 const initialState = {
   board: {
@@ -16,7 +16,7 @@ const slice = createSlice({
   name: 'board',
   initialState,
   extraReducers: (builder) => {
-    builder.addCase(createBoard.fulfilled, (state, action) => {
+    builder.addCase(createBoardThunk.fulfilled, (state, action) => {
       state.board = action.payload;
     });
   },

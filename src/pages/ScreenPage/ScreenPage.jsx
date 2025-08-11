@@ -17,6 +17,7 @@ const ScreenPage = () => {
         <p className={s.welcomeText}>
           Before starting your project, it is essential
           <span className={s.createBoard} onClick={() => dispatch(openModal())}>
+            {' '}
             to create a board
           </span>
           to visualize and track all the necessary tasks and milestones. This
@@ -24,6 +25,7 @@ const ScreenPage = () => {
           effective collaboration among team members.
         </p>
       </div>
+
       {isModalOpen && (
         <Modal>
           <AddBoardForm />

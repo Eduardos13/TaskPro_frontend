@@ -82,6 +82,10 @@
   gap: 8px;
 }
 
+.createBoardBox:hover {
+  cursor: pointer;
+}
+
 .myBoardsTitle {
   font-weight: 400;
   font-size: 12px;
