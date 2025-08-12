@@ -1,24 +1,30 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { createBoardThunk } from './operations.js';
+import { createBoardThunk, getAllBoardsThunk } from './operations.js';
 
 const initialState = {
-  board: {
-    _id: '',
-    title: '',
-    background: '',
-    icon: '',
-    ownur: '',
-    columns: [],
-  },
+  boards: [],
+  // board: {
+  //   _id: '',
+  //   title: '',
+  //   background: '',
+  //   icon: '',
+  //   ownur: '',
+  //   columns: [],
+  // },
 };
 
 const slice = createSlice({
   name: 'board',
   initialState,
+  reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(createBoardThunk.fulfilled, (state, action) => {
-      state.board = action.payload;
-    });
+    builder
+      .addCase(getAllBoardsThunk.fulfilled, (state, action) => {
+        state.boards = action.payload ?? [];
+      })
+      .addCase(createBoardThunk.fulfilled, (state, action) => {
+        if (action.payload) state.boards.unshift(payload);
+      });
   },
 });
 

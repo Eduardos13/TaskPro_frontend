@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import s from './SideBar.module.css';
 import sprite from '../../icons/all-icons.svg';
 import cactus from '../../icons/cactus.png';
@@ -11,15 +11,22 @@ import { selectIsModalOpen } from '../../redux/modal/selectors';
 import Modal from '../Modal/Modal.jsx';
 import AddBoardForm from '../Forms/Board/AddBoardForm/AddBoardForm.jsx';
 import { openModal } from '../../redux/modal/slice.js';
+import { selectBoards } from '../../redux/board/selectors';
+import { getAllBoardsThunk } from '../../redux/board/operations';
 
 const SideBar = ({ isOpen }) => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const isModalOpen = useSelector(selectIsModalOpen);
+  const boards = useSelector(selectBoards);
 
   if (!isLoggedIn) {
     return <Navigate to="auth" />;
   }
+
+  useEffect(() => {
+    if (isLoggedIn) dispatch(getAllBoardsThunk());
+  }, [isLoggedIn, dispatch]);
 
   return (
     <section className={clsx(s.sideBarSection, { [s.open]: isOpen })}>
@@ -51,8 +58,29 @@ const SideBar = ({ isOpen }) => {
         </div>
       </div>
       <ul className={s.boardsList}>
-        <li className={s.boardItem}>Board 1</li>
-        <li className={s.boardItem}>Board 2</li>
+        {boards.length > 0 ? (
+          boards.map((board) => (
+            <li key={board._id} className={s.boardsItem}>
+              <div className={s.sideBarBoard}>
+                <div className={s.sideBarBoardInfo}>
+                  {board.icon}
+                  {board.title}
+                </div>
+                <div className={s.sideBarBoardIcons}>
+                  <svg className={s.sidebarBoardIcon} width="18" height="18">
+                    <use href={`${sprite}#icon-pencil`} />
+                  </svg>
+                  <svg className={s.sidebarBoardIcon} width="18" height="18">
+                    <use href={`${sprite}#icon-trash`} />
+                  </svg>
+                </div>
+                <span className={s.activeIndicator}></span>
+              </div>
+            </li>
+          ))
+        ) : (
+          <span>Create your first board</span>
+        )}
       </ul>
       <div className={s.sideBarContainer}>
         <div className={s.needHelpBox}>

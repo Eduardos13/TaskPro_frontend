@@ -2,11 +2,11 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { taskPROapi } from '../../config/taskPROapi';
 
 export const getAllBoardsThunk = createAsyncThunk(
-  'getBoards',
+  'getAllBoards',
   async (_, thunkAPI) => {
     try {
       const { data } = await taskPROapi.get('boards');
-      return data;
+      return data.boards;
     } catch (error) {
       thunkAPI.rejectWithValue(error.message);
     }

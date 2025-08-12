@@ -8,10 +8,18 @@ import { BrowserRouter } from 'react-router';
 import { Provider } from 'react-redux';
 import { persistor, store } from './redux/store.js';
 import { PersistGate } from 'redux-persist/integration/react';
+import { setToken } from './config/taskPROapi.js';
 
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
+    <PersistGate
+      loading={null}
+      persistor={persistor}
+      onBeforeLift={() => {
+        const token = store.getState().auth.accessToken;
+        if (token) setToken(token);
+      }}
+    >
       <BrowserRouter>
         <ThemeProvider>
           <App />

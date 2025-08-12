@@ -1,11 +1,12 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { taskPROapi } from '../../config/taskPROapi.js';
+import { clearToken, setToken, taskPROapi } from '../../config/taskPROapi.js';
 
 export const registerThunk = createAsyncThunk(
   'register',
   async (credentials, thunkAPI) => {
     try {
       const { data } = await taskPROapi.post('auth/register', credentials);
+      setToken(data.accesseToken);
       return data;
     } catch (error) {
       thunkAPI.rejectWithValue(error.message);
@@ -18,6 +19,7 @@ export const loginThunk = createAsyncThunk(
   async (credentials, thunkAPI) => {
     try {
       const { data } = await taskPROapi.post('auth/login', credentials);
+      setToken(data.accesseToken);
       return data;
     } catch (error) {
       thunkAPI.rejectWithValue(error.message);
@@ -28,6 +30,7 @@ export const loginThunk = createAsyncThunk(
 export const logoutThunk = createAsyncThunk('logout', async (_, thunkAPI) => {
   try {
     await taskPROapi.post('auth/logout');
+    clearToken();
   } catch (error) {
     thunkAPI.rejectWithValue(error.message);
   }

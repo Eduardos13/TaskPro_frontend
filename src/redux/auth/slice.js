@@ -18,11 +18,11 @@ const initialState = {
 const slice = createSlice({
   name: 'auth',
   initialState,
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(registerThunk.fulfilled, (state, action) => {
         state.user = action.payload.data.user;
-
         state.isLoggedIn = true;
       })
       .addCase(loginThunk.fulfilled, (state, action) => {
@@ -30,8 +30,8 @@ const slice = createSlice({
         state.isLoggedIn = true;
       })
       .addCase(logoutThunk.fulfilled, (state, action) => {
-        state.isError = false;
-        state.isLoading = false;
+        // state.isError = false;
+        // state.isLoading = false;
         return initialState;
       })
       .addMatcher(
