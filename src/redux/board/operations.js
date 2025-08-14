@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { taskPROapi } from '../../config/taskPROapi';
+import { taskPROapi } from '../../config/taskPROapi.js';
 
 export const getAllBoardsThunk = createAsyncThunk(
   'getAllBoards',

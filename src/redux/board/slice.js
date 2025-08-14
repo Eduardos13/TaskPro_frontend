@@ -23,7 +23,7 @@ const slice = createSlice({
         state.boards = action.payload ?? [];
       })
       .addCase(createBoardThunk.fulfilled, (state, action) => {
-        if (action.payload) state.boards.unshift(payload);
+        state.boards.push(action.payload);
       });
   },
 });
