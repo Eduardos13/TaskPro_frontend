@@ -20,13 +20,13 @@ const SideBar = ({ isOpen }) => {
   const isModalOpen = useSelector(selectIsModalOpen);
   const boards = useSelector(selectBoards);
 
-  if (!isLoggedIn) {
-    return <Navigate to="auth" />;
-  }
-
   useEffect(() => {
     if (isLoggedIn) dispatch(getAllBoardsThunk());
   }, [isLoggedIn, dispatch]);
+
+  if (!isLoggedIn) {
+    return <Navigate to="auth" />;
+  }
 
   return (
     <section className={clsx(s.sideBarSection, { [s.open]: isOpen })}>
@@ -63,7 +63,7 @@ const SideBar = ({ isOpen }) => {
             <li key={board._id} className={s.boardsItem}>
               <div className={s.sideBarBoard}>
                 <div className={s.sideBarBoardInfo}>
-                  {board.icon}
+                  {/* {board.icon} */}
                   {board.title}
                 </div>
                 <div className={s.sideBarBoardIcons}>

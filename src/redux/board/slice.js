@@ -3,6 +3,8 @@ import { createBoardThunk, getAllBoardsThunk } from './operations.js';
 
 const initialState = {
   boards: [],
+  isLoading: false,
+  isError: false,
   // board: {
   //   _id: '',
   //   title: '',
@@ -21,9 +23,21 @@ const slice = createSlice({
     builder
       .addCase(getAllBoardsThunk.fulfilled, (state, action) => {
         state.boards = action.payload ?? [];
+        state.isLoading = false;
+        state.isError = false;
+      })
+      .addCase(getAllBoardsThunk.pending, (state, action) => {
+        state.isLoading = true;
+        state.isError = false;
+      })
+      .addCase(getAllBoardsThunk.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
       })
       .addCase(createBoardThunk.fulfilled, (state, action) => {
-        state.boards.push(action.payload);
+        if (action.payload && action.payload._id) {
+          state.boards.unshift(action.payload);
+        }
       });
   },
 });

@@ -17,7 +17,10 @@ export const createBoardThunk = createAsyncThunk(
   'createBoard',
   async (body, thunkAPI) => {
     try {
-      const { data } = await taskPROapi.post('boards', body);
+      const payload = body?.title
+        ? body
+        : { title: body?.boardTitle?.trim() || '' };
+      const { data } = await taskPROapi.post('boards', payload);
       return data;
     } catch (error) {
       thunkAPI.rejectWithValue(error.message);

@@ -4,13 +4,25 @@ import sprite from '../../../../icons/all-icons.svg';
 import { useDispatch } from 'react-redux';
 import { createBoardThunk } from '../../../../redux/board/operations.js';
 import CreateBtn from '../../../CreateBtn/CreateBtn.jsx';
+import { closeModal } from '../../../../redux/modal/slice';
 
 const AddBoardForm = () => {
   const dispatch = useDispatch();
 
-  const handleSubmit = (values, options) => {
-    dispatch(createBoardThunk(values));
-    options.resetForm();
+  // const handleSubmit = (values, options) => {
+  //   dispatch(createBoardThunk(values));
+  //   options.resetForm();
+  // };
+
+  const handleSubmit = async (values, options) => {
+    const payload = { title: values.boardTitle.trim() };
+    if (!payload.title) return;
+
+    const action = await dispatch(createBoardThunk(payload));
+    if (createBoardThunk.fulfilled.match(action)) {
+      dispatch(closeModal());
+      options.resetForm();
+    }
   };
 
   const initialValues = {
