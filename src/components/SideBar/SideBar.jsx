@@ -12,7 +12,10 @@ import Modal from '../Modal/Modal.jsx';
 import AddBoardForm from '../Forms/Board/AddBoardForm/AddBoardForm.jsx';
 import { openModal } from '../../redux/modal/slice.js';
 import { selectBoards } from '../../redux/board/selectors';
-import { getAllBoardsThunk } from '../../redux/board/operations';
+import {
+  deleteBoardThunk,
+  getAllBoardsThunk,
+} from '../../redux/board/operations.js';
 
 const SideBar = ({ isOpen }) => {
   const dispatch = useDispatch();
@@ -70,7 +73,14 @@ const SideBar = ({ isOpen }) => {
                   <svg className={s.sidebarBoardIcon} width="18" height="18">
                     <use href={`${sprite}#icon-pencil`} />
                   </svg>
-                  <svg className={s.sidebarBoardIcon} width="18" height="18">
+                  <svg
+                    className={s.sidebarBoardIcon}
+                    onClick={() => {
+                      dispatch(deleteBoardThunk());
+                    }}
+                    width="18"
+                    height="18"
+                  >
                     <use href={`${sprite}#icon-trash`} />
                   </svg>
                 </div>

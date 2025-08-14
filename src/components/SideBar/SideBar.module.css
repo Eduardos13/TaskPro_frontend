@@ -125,7 +125,7 @@
 }
 
 .boardsList {
-  height: 140px;
+  /* height: 140px; */
   margin-top: 40px;
   display: flex;
   flex-direction: column;

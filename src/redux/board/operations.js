@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { taskPROapi } from '../../config/taskPROapi.js';
+import { setToken, taskPROapi } from '../../config/taskPROapi.js';
 
 export const getAllBoardsThunk = createAsyncThunk(
   'getAllBoards',
@@ -22,6 +22,17 @@ export const createBoardThunk = createAsyncThunk(
         : { title: body?.boardTitle?.trim() || '' };
       const { data } = await taskPROapi.post('boards', payload);
       return data;
+    } catch (error) {
+      thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const deleteBoardThunk = createAsyncThunk(
+  'deleteBoard',
+  async (_id, thunkAPI) => {
+    try {
+      await taskPROapi.delete(`boards/${_id}`, { headers: setToken(token) });
     } catch (error) {
       thunkAPI.rejectWithValue(error.message);
     }

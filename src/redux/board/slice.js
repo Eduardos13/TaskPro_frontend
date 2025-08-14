@@ -1,5 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { createBoardThunk, getAllBoardsThunk } from './operations.js';
+import {
+  createBoardThunk,
+  deleteBoardThunk,
+  getAllBoardsThunk,
+} from './operations.js';
 
 const initialState = {
   boards: [],
@@ -38,6 +42,11 @@ const slice = createSlice({
         if (action.payload && action.payload._id) {
           state.boards.unshift(action.payload);
         }
+      })
+      .addCase(deleteBoardThunk.fulfilled, (state, action) => {
+        state.boards = state.boards.filter(
+          (board) => board._id !== action.payload
+        );
       });
   },
 });
