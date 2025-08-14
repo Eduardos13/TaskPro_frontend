@@ -31,6 +31,10 @@ const SideBar = ({ isOpen }) => {
     return <Navigate to="auth" />;
   }
 
+  const handleDeleteBoard = (_id) => {
+    dispatch(deleteBoardThunk(_id));
+  };
+
   return (
     <section className={clsx(s.sideBarSection, { [s.open]: isOpen })}>
       <div className={s.sideBarContainer}>
@@ -76,7 +80,7 @@ const SideBar = ({ isOpen }) => {
                   <svg
                     className={s.sidebarBoardIcon}
                     onClick={() => {
-                      dispatch(deleteBoardThunk());
+                      handleDeleteBoard(board._id);
                     }}
                     width="18"
                     height="18"

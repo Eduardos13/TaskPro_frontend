@@ -47,6 +47,12 @@ const slice = createSlice({
         state.boards = state.boards.filter(
           (board) => board._id !== action.payload
         );
+        state.isLoading = false;
+        state.isError = false;
+      })
+      .addCase(deleteBoardThunk.rejected, (action, payload) => {
+        state.isLoading = false;
+        isError = true;
       });
   },
 });

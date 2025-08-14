@@ -32,7 +32,8 @@ export const deleteBoardThunk = createAsyncThunk(
   'deleteBoard',
   async (_id, thunkAPI) => {
     try {
-      await taskPROapi.delete(`boards/${_id}`, { headers: setToken(token) });
+      await taskPROapi.delete(`boards/${_id}`);
+      return _id;
     } catch (error) {
       thunkAPI.rejectWithValue(error.message);
     }
