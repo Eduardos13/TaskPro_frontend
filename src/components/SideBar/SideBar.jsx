@@ -11,21 +11,25 @@ import {
   selectIsAddModalOpen,
   selectIsDeleteModalOpen,
   selectIsEditModalOpen,
+  selectIsModalOpen,
 } from '../../redux/modal/selectors';
 import AddBoardModal from '../Forms/Board/AddBoardModal/AddBoardModal.jsx';
 import {
   openAddModal,
   openDeleteModal,
   openEditModal,
+  openModal,
 } from '../../redux/modal/slice.js';
 import { selectBoards } from '../../redux/board/selectors';
 import { getAllBoardsThunk } from '../../redux/board/operations.js';
 import ConfirmationModal from '../Forms/Confirmation/ConfirmationModal.jsx';
 import EditBoardModal from '../Forms/Board/EditBoardModal/EditBoardModal';
+import NeedHelpModal from '../Forms/NeedHelp/NeedHelpModal';
 
 const SideBar = ({ isOpen }) => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
+  const isModalOpen = useSelector(selectIsModalOpen);
   const isAddModalOpen = useSelector(selectIsAddModalOpen);
   const isEditModalOpen = useSelector(selectIsEditModalOpen);
   const isDeleteModalOpen = useSelector(selectIsDeleteModalOpen);
@@ -114,7 +118,10 @@ const SideBar = ({ isOpen }) => {
             If you need help with <span>TaskPro</span>, check out our support
             resources or reach out to our customer support team.
           </p>
-          <button className={s.needHelpBtn}>
+          <button
+            className={s.needHelpBtn}
+            onClick={() => dispatch(openModal())}
+          >
             <svg width="20" height="20">
               <use href={`${sprite}#icon-help-circle`} />
             </svg>
@@ -137,6 +144,7 @@ const SideBar = ({ isOpen }) => {
       {isAddModalOpen && <AddBoardModal />}
       {isEditModalOpen && <EditBoardModal />}
       {isDeleteModalOpen && <ConfirmationModal />}
+      {isModalOpen && <NeedHelpModal />}
     </section>
   );
 };
