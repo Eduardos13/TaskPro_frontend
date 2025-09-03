@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { createBoardThunk } from '../../../../redux/board/operations.js';
 import CreateBtn from '../../../CreateBtn/CreateBtn.jsx';
 import { closeModal } from '../../../../redux/modal/slice';
+import Modal from '../../../Modal/Modal.jsx';
 
 const AddBoardModal = () => {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ const AddBoardModal = () => {
     boardTitle: '',
   };
   return (
-    <>
+    <Modal>
       <h2 className={s.boardFormTitle}>New board</h2>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form>
@@ -108,7 +109,7 @@ const AddBoardModal = () => {
           <CreateBtn />
         </Form>
       </Formik>
-    </>
+    </Modal>
   );
 };
 

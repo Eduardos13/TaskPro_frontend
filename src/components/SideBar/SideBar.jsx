@@ -8,7 +8,6 @@ import { logoutThunk } from '../../redux/auth/operations.js';
 import { Navigate } from 'react-router';
 import { selectIsLoggedIn } from '../../redux/auth/selectors.js';
 import { selectIsModalOpen } from '../../redux/modal/selectors';
-import Modal from '../Modal/Modal.jsx';
 import AddBoardModal from '../Forms/Board/AddBoardModal/AddBoardModal.jsx';
 import { openModal } from '../../redux/modal/slice.js';
 import { selectBoards } from '../../redux/board/selectors';
@@ -16,6 +15,7 @@ import {
   deleteBoardThunk,
   getAllBoardsThunk,
 } from '../../redux/board/operations.js';
+import ConfirmationModal from '../Forms/Confirmation/ConfirmationModal.jsx';
 
 const SideBar = ({ isOpen }) => {
   const dispatch = useDispatch();
@@ -123,11 +123,7 @@ const SideBar = ({ isOpen }) => {
         </button>
       </div>
 
-      {isModalOpen && (
-        <Modal>
-          <AddBoardModal />
-        </Modal>
-      )}
+      {isModalOpen && <AddBoardModal />}
     </section>
   );
 };

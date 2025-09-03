@@ -1,0 +1,40 @@
+.confirmTitle {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: #161616;
+  margin-bottom: 20px;
+}
+
+.confirmationBtns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.yesBtn,
+.noBtn {
+  width: 50px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+
+.yesBtn {
+  background-color: var(--high-priority-color);
+}
+
+.yesBtn:hover {
+  background-color: #a0c38f;
+}
+
+.noBtn {
+  background-color: var(--medium-priority-color);
+}
+
+.noBtn:hover {
+  background-color: #a96a81;
+}
