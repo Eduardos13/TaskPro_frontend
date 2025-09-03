@@ -9,7 +9,7 @@ import { Navigate } from 'react-router';
 import { selectIsLoggedIn } from '../../redux/auth/selectors.js';
 import { selectIsModalOpen } from '../../redux/modal/selectors';
 import Modal from '../Modal/Modal.jsx';
-import AddBoardForm from '../Forms/Board/AddBoardForm/AddBoardForm.jsx';
+import AddBoardModal from '../Forms/Board/AddBoardModal/AddBoardModal.jsx';
 import { openModal } from '../../redux/modal/slice.js';
 import { selectBoards } from '../../redux/board/selectors';
 import {
@@ -125,7 +125,7 @@ const SideBar = ({ isOpen }) => {
 
       {isModalOpen && (
         <Modal>
-          <AddBoardForm />
+          <AddBoardModal />
         </Modal>
       )}
     </section>

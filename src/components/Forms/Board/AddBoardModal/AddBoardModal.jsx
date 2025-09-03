@@ -1,12 +1,12 @@
 import { Field, Form, Formik } from 'formik';
-import s from './AddBoardForm.module.css';
+import s from './AddBoardModal.module.css';
 import sprite from '../../../../icons/all-icons.svg';
 import { useDispatch } from 'react-redux';
 import { createBoardThunk } from '../../../../redux/board/operations.js';
 import CreateBtn from '../../../CreateBtn/CreateBtn.jsx';
 import { closeModal } from '../../../../redux/modal/slice';
 
-const AddBoardForm = () => {
+const AddBoardModal = () => {
   const dispatch = useDispatch();
 
   // const handleSubmit = (values, options) => {
@@ -112,4 +112,4 @@ const AddBoardForm = () => {
   );
 };
 
-export default AddBoardForm;
+export default AddBoardModal;

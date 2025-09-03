@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { openModal } from '../../redux/modal/slice.js';
 import Modal from '../../components/Modal/Modal.jsx';
 import { selectIsModalOpen } from '../../redux/modal/selectors.js';
-import AddBoardForm from '../../components/Forms/Board/AddBoardForm/AddBoardForm.jsx';
+import AddBoardModal from '../../components/Forms/Board/AddBoardModal/AddBoardModal.jsx';
 
 const ScreenPage = () => {
   const dispatch = useDispatch();
@@ -24,11 +24,13 @@ const ScreenPage = () => {
           board serves as a powerful tool to organize the workflow and ensure
           effective collaboration among team members.
         </p>
+
+        <AddBoardModal />
       </div>
 
       {isModalOpen && (
         <Modal>
-          <AddBoardForm />
+          <AddBoardModal />
         </Modal>
       )}
     </section>
