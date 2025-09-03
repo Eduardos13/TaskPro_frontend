@@ -2,12 +2,12 @@ import React from 'react';
 import s from './Modal.module.css';
 import sprite from '../../icons/all-icons.svg';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIsModalOpen } from '../../redux/modal/selectors';
+import { selectIsAddModalOpen } from '../../redux/modal/selectors';
 import { closeModal } from '../../redux/modal/slice';
 
 const Modal = ({ children }) => {
   const dispatch = useDispatch();
-  const isModalOpen = useSelector(selectIsModalOpen);
+  const isModalOpen = useSelector(selectIsAddModalOpen);
 
   return (
     <div className={s.modalOverlay} onClick={() => dispatch(closeModal())}>

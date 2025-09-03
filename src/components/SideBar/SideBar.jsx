@@ -7,20 +7,28 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logoutThunk } from '../../redux/auth/operations.js';
 import { Navigate } from 'react-router';
 import { selectIsLoggedIn } from '../../redux/auth/selectors.js';
-import { selectIsModalOpen } from '../../redux/modal/selectors';
-import AddBoardModal from '../Forms/Board/AddBoardModal/AddBoardModal.jsx';
-import { openModal } from '../../redux/modal/slice.js';
-import { selectBoards } from '../../redux/board/selectors';
 import {
-  deleteBoardThunk,
-  getAllBoardsThunk,
-} from '../../redux/board/operations.js';
+  selectIsAddModalOpen,
+  selectIsDeleteModalOpen,
+  selectIsEditModalOpen,
+} from '../../redux/modal/selectors';
+import AddBoardModal from '../Forms/Board/AddBoardModal/AddBoardModal.jsx';
+import {
+  openAddModal,
+  openDeleteModal,
+  openEditModal,
+} from '../../redux/modal/slice.js';
+import { selectBoards } from '../../redux/board/selectors';
+import { getAllBoardsThunk } from '../../redux/board/operations.js';
 import ConfirmationModal from '../Forms/Confirmation/ConfirmationModal.jsx';
+import EditBoardModal from '../Forms/Board/EditBoardModal/EditBoardModal';
 
 const SideBar = ({ isOpen }) => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  const isModalOpen = useSelector(selectIsModalOpen);
+  const isAddModalOpen = useSelector(selectIsAddModalOpen);
+  const isEditModalOpen = useSelector(selectIsEditModalOpen);
+  const isDeleteModalOpen = useSelector(selectIsDeleteModalOpen);
   const boards = useSelector(selectBoards);
 
   useEffect(() => {
@@ -30,10 +38,6 @@ const SideBar = ({ isOpen }) => {
   if (!isLoggedIn) {
     return <Navigate to="auth" />;
   }
-
-  const handleDeleteBoard = (_id) => {
-    dispatch(deleteBoardThunk(_id));
-  };
 
   return (
     <section className={clsx(s.sideBarSection, { [s.open]: isOpen })}>
@@ -52,7 +56,7 @@ const SideBar = ({ isOpen }) => {
           <div
             className={s.addBoard}
             onClick={() => {
-              dispatch(openModal());
+              dispatch(openAddModal());
             }}
           >
             <span className={s.createBordTitle}>Create a new board</span>
@@ -74,13 +78,20 @@ const SideBar = ({ isOpen }) => {
                   {board.title}
                 </div>
                 <div className={s.sideBarBoardIcons}>
-                  <svg className={s.sidebarBoardIcon} width="18" height="18">
+                  <svg
+                    className={s.sidebarBoardIcon}
+                    onClick={() => {
+                      dispatch(openEditModal());
+                    }}
+                    width="18"
+                    height="18"
+                  >
                     <use href={`${sprite}#icon-pencil`} />
                   </svg>
                   <svg
                     className={s.sidebarBoardIcon}
                     onClick={() => {
-                      handleDeleteBoard(board._id);
+                      dispatch(openDeleteModal());
                     }}
                     width="18"
                     height="18"
@@ -123,7 +134,9 @@ const SideBar = ({ isOpen }) => {
         </button>
       </div>
 
-      {isModalOpen && <AddBoardModal />}
+      {isAddModalOpen && <AddBoardModal />}
+      {isEditModalOpen && <EditBoardModal />}
+      {isDeleteModalOpen && <ConfirmationModal />}
     </section>
   );
 };

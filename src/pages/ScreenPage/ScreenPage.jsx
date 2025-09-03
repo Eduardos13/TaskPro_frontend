@@ -1,14 +1,14 @@
 import React from 'react';
 import s from './ScreenPage.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { openModal } from '../../redux/modal/slice.js';
-import { selectIsModalOpen } from '../../redux/modal/selectors.js';
+import { openAddModal } from '../../redux/modal/slice.js';
+import { selectIsAddModalOpen } from '../../redux/modal/selectors.js';
 import AddBoardModal from '../../components/Forms/Board/AddBoardModal/AddBoardModal.jsx';
 import ConfirmationModal from '../../components/Forms/Confirmation/ConfirmationModal.jsx';
 
 const ScreenPage = () => {
   const dispatch = useDispatch();
-  const isModalOpen = useSelector(selectIsModalOpen);
+  const isModalOpen = useSelector(selectIsAddModalOpen);
 
   return (
     <section className={s.screenPage}>
@@ -16,7 +16,10 @@ const ScreenPage = () => {
         {/* <FilltersDropDown /> */}
         <p className={s.welcomeText}>
           Before starting your project, it is essential
-          <span className={s.createBoard} onClick={() => dispatch(openModal())}>
+          <span
+            className={s.createBoard}
+            onClick={() => dispatch(openAddModal())}
+          >
             {' '}
             to create a board
           </span>

@@ -1,7 +1,16 @@
+import { useDispatch } from 'react-redux';
 import Modal from '../../Modal/Modal.jsx';
 import s from './Confirmation.module.css';
+import { deleteBoardThunk } from '../../../redux/board/operations.js';
+import { closeModal } from '../../../redux/modal/slice.js';
 
 const ConfirmationModal = () => {
+  const dispatch = useDispatch();
+
+  //   const handleDeleteBoard = (_id) => {
+  //     dispatch(deleteBoardThunk(_id));
+  //   };
+
   return (
     <Modal>
       <div className={s.container}>
@@ -11,8 +20,15 @@ const ConfirmationModal = () => {
             cancel this action!
           </h2>
           <div className={s.confirmationBtns}>
-            <button className={s.yesBtn}>Yes</button>
-            <button className={s.noBtn}>No</button>
+            <button
+              className={s.yesBtn}
+              //   onSubmit={handleDeleteBoard(board._id)}
+            >
+              Yes
+            </button>
+            <button className={s.noBtn} onClick={() => dispatch(closeModal())}>
+              No
+            </button>
           </div>
         </div>
       </div>
