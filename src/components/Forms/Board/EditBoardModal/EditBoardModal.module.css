@@ -1,0 +1,63 @@
+.boardFormTitle {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: var(--main-text-color);
+  margin-bottom: 24px;
+}
+
+.formField {
+  border: 1px solid #bedbb0;
+  border-radius: 8px;
+  width: 302px;
+  height: 49px;
+  box-shadow: 0 4px 16px 0 rgba(22, 22, 22, 0.08);
+  opacity: 0.4;
+  margin-bottom: 24px;
+}
+
+.iconsTitle {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: var(--main-text-color);
+  margin-bottom: 14px;
+}
+
+.iconsList {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.icon {
+  fill: none;
+  stroke: rgba(22, 22, 22, 0.5);
+}
+
+.backgroundTitle {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: var(--main-text-color);
+  margin-bottom: 14px;
+}
+
+.backgroundsList {
+  width: 252px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 40px;
+}
+
+.backgroundsItem {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 2px black solid;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
