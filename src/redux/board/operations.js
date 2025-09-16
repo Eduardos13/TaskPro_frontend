@@ -39,3 +39,12 @@ export const deleteBoardThunk = createAsyncThunk(
     }
   }
 );
+export const editBoardThunk = createAsyncThunk(
+  'updateBoard',
+  async (body, thunkAPI) => {
+    try {
+    } catch (error) {
+      thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
